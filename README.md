@@ -1,12 +1,11 @@
-
 ### Date created
 14 sep 2021
 
 ### Project Title
-Python Bikeshare
+Bikeshare
 
 ### Description
-work with datasets of cities with people who share bikes and do analysis on them
+work with datasets of cities with people who share bikes and do analysis on them using python
 
 ### Files used
 bikeshare.py ,
