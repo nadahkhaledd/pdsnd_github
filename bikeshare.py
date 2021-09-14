@@ -17,11 +17,11 @@ choices = ('month', 'day', 'both', 'none')
 
 def looping(msg, array):
     """
-        takes choice and loop until it gets it right
+    takes choice and loop until it gets it right
 
-        Returns:
-            (str) data - choice after modification
-        """
+    Returns:
+        (str) data - choice after modification
+    """
     flag = True
     while flag:
         data = input(msg).lower().strip()
@@ -42,11 +42,12 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # get user input for city (chicago, new york city, washington).
     city = looping('Would you like to see data for Chicago, New York, or Washington?\n', CITY_DATA)
 
     month, day = 'all', 'all'
     while(True):
+        # get input for how user would like to filter data displayed
         choice = input('Would you like to filter the data by month, day, both, none?\n').lower().strip()
         if (choice in choices):
             if choice == 'month':
@@ -224,7 +225,7 @@ def main():
         city, month, day, choice = get_filters()
         df = load_data(city, month, day)
 
-        #showing statistics
+        # showing statistics
         time_stats(df, choice)
         station_stats(df, choice)
         trip_duration_stats(df, choice)
