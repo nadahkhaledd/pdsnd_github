@@ -1,7 +1,6 @@
 import time
 import pandas as pd
 import numpy as np
-import time
 
 CITY_DATA = {'chicago': 'chicago.csv',
              'new york': 'new_york_city.csv',
@@ -22,11 +21,11 @@ def looping(msg, array):
     Returns:
         (str) data - choice after modification
     """
-    flag = True
-    while flag:
+
+    while True:
         data = input(msg).lower().strip()
         if data in array:
-            flag = False
+            break
         else:
             print('wrong input, please try again and enter valid name')
     return data
